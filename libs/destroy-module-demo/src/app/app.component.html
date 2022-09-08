@@ -1,0 +1,22 @@
+<h1>DestroyModule demo</h1>
+
+<p
+  >Click &lt;Route to AModule&gt; link to navigate to lazy loading `AModule`. Module is providing `LoopService`. Service
+  emits console log events periodically. And this module and service won't be destroyed. `AModule` imports `DModule` and
+  it won't be destroyed to.</p
+>
+
+<p
+  >Click &lt;Route to B-CModule&gt; link to navigate to lazy loading `BModule` and sub `CModule`. Each of modules is
+  providing same `LoopService`. Service emits console log events periodically as at the `AModule`. And this modules and
+  provided services will be destroyed with back navigation also will be destroyed imported `DModule`.</p
+>
+
+<p>Please open console to see 'LoopService' console log events emission from each alive module.</p>
+
+<div
+  ><a [routerLink]="['/', 'a-route']">Route to AModule</a> |
+  <a [routerLink]="['/', 'b-route', 'c-route']">Route to B-CModule</a> | <a [routerLink]="['/']">Route to root</a></div
+>
+
+<div><router-outlet></router-outlet></div>
