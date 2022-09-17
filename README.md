@@ -4,9 +4,9 @@
 
 ## Angular Versions compatibility
 
-| destroy-module | Angular  |
-| :------------: | :------: |
-|      4.x       | >= 4 < 5 |
+|                       destroy-module                       | Angular  |
+| :--------------------------------------------------------: | :------: |
+| [4.x](https://github.com/norefx/destroy-module/tree/4.x.x) | >= 4 < 5 |
 
 ## Table of contents
 
