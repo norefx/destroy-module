@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+original_parent=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null)
+main_parent=$(git merge-base HEAD main)
+head="HEAD"
+
+if [ ! -z $main_parent ]; then
+  head=$main_parent
+fi
+
+if [ ! -z $head_original ]; then
+  head=$head_original
+fi
+
+npx --no -- commitlint --from=$head --to=HEAD
