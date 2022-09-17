@@ -1,8 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "project": {
-    "name": "destroy-module-demo"
-  },
+  "project": { "name": "destroy-module-demo" },
   "apps": [
     {
       "root": "libs/destroy-module-demo/src",
@@ -18,30 +16,16 @@
       "styles": ["styles.css"],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
-      "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
+      "environments": { "dev": "environments/environment.ts", "prod": "environments/environment.prod.ts" }
     }
   ],
   "packageManager": "yarn",
-  "e2e": {
-    "protractor": {
-      "config": "./protractor.conf.js"
-    }
-  },
+  "e2e": { "protractor": { "config": "./protractor.conf.js" } },
   "lint": [
     { "project": "src/tsconfig.app.json" },
     { "project": "src/tsconfig.spec.json" },
     { "project": "e2e/tsconfig.e2e.json" }
   ],
-  "test": {
-    "karma": {
-      "config": "./karma.conf.js"
-    }
-  },
-  "defaults": {
-    "styleExt": "css",
-    "component": {}
-  }
+  "test": { "karma": { "config": "./karma.conf.js" } },
+  "defaults": { "styleExt": "css", "component": {} }
 }
