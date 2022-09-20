@@ -1,5 +1,6 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": { "outDir": "../../out-tsc/spec", "emitDecoratorMetadata": true },
+  "files": ["test.ts"],
   "include": ["**/*.spec.ts", "**/*.d.ts"]
 }
