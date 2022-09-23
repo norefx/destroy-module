@@ -1,7 +1,8 @@
 {
   "name": "@norefx/ngx-destroy-module",
-  "description": "Guard to destroy Angular lazy-loaded route modules",
   "version": "4.1.0",
+  "description": "Guard to destroy Angular lazy-loaded route modules",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -12,7 +13,6 @@
     "e2e": "ng e2e",
     "prepare": "husky install"
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
