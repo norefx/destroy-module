@@ -4,7 +4,7 @@
     "outDir": "./dist/out-tsc",
     "baseUrl": "./",
     "sourceMap": true,
-    "paths": { "ngx-destroy-module": ["dm-dist/ngx-destroy-module"] },
+    "paths": { "@norefx/ngx-destroy-module": ["dm-dist/ngx-destroy-module"] },
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
