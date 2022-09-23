@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DestroyModuleGuard } from 'ngx-destroy-module';
+import { DestroyModuleGuard } from '@norefx/ngx-destroy-module';
 
 const ROUTES: Routes = [
   {
