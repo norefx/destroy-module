@@ -8,7 +8,7 @@
     "ng": "ng",
     "start": "ng serve --app destroy-module-demo",
     "build": "ng-packagr -p libs/destroy-module/ng-package.json",
-    "test": "ng test --app destroy-module",
+    "test": "ng test --app destroy-module --code-coverage=true",
     "lint": "ng lint",
     "prepare": "husky install"
   },
