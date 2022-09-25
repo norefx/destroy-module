@@ -2,11 +2,11 @@
 
 > Guard to destroy Angular lazy-loaded route modules
 
-## Angular Versions compatibility
+## Angular Versions Compatibility
 
-|                       destroy-module                       | Angular  |
-| :--------------------------------------------------------: | :------: |
-| [4.x](https://github.com/norefx/destroy-module/tree/4.x.x) | >= 4 < 5 |
+|                        destroy-module                        | Angular  |
+| :----------------------------------------------------------: | :------: |
+| [4.x.x](https://github.com/norefx/destroy-module/tree/4.x.x) | >= 4 < 5 |
 
 ## Table of contents
 
