@@ -12,13 +12,9 @@ module.exports = function (config) {
     client: {
       clearContext: false, // leave Jasmine Spec Runner output visible in browser
     },
-    files: [{ pattern: './libs/destroy-module/src/test.ts', watched: false }],
-    preprocessors: { './libs/destroy-module/src/test.ts': ['@angular/cli'] },
-    mime: { 'text/x-typescript': ['ts', 'tsx'] },
     coverageIstanbulReporter: { reports: ['html', 'lcovonly'], fixWebpackSourcePaths: true },
     angularCli: { environment: 'dev' },
-    reporters:
-      config.angularCli && config.angularCli.codeCoverage ? ['progress', 'coverage-istanbul'] : ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

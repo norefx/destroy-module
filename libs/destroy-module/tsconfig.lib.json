@@ -7,5 +7,5 @@
     "inlineSources": true,
     "types": ["jasmine", "node"]
   },
-  "exclude": ["test.ts", "**/*.spec.ts"]
+  "exclude": ["main.ts", "test.ts", "**/*.spec.ts"]
 }
