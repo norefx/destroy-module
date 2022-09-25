@@ -7,5 +7,5 @@ import { LoopService } from '../services/loop.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CComponent {
-  constructor(private readonly _LoopService: LoopService) {}
+  constructor(private readonly _loopService: LoopService) {}
 }
