@@ -3,6 +3,18 @@
   "project": { "name": "destroy-module" },
   "apps": [
     {
+      "name": "destroy-module",
+      "root": "libs/destroy-module/src",
+      "outDir": "dist",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "../test.ts",
+      "tsconfig": "../tsconfig.lib.json",
+      "testTsconfig": "../tsconfig.spec.json",
+      "prefix": "dm"
+    },
+    {
+      "name": "destroy-module-demo",
       "root": "libs/destroy-module-demo/src",
       "outDir": "dist",
       "assets": ["assets", "favicon.ico"],

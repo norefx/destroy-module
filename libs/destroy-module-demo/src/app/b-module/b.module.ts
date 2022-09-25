@@ -1,6 +1,8 @@
 import { NgModule, OnDestroy } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DestroyModuleGuard } from '@norefx/ngx-destroy-module';
+// TODO: Return alias import
+// import { DestroyModuleGuard } from '@norefx/ngx-destroy-module';
+import { DestroyModuleGuard } from 'dm-dist/ngx-destroy-module';
 import { DModule } from '../d-module/d.module';
 import { LoopService, MODULE_NAME } from '../services/loop.service';
 import { BComponent } from './b.component';
