@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
-@Component({ selector: `dm-root`, templateUrl: `./app.component.html`, styleUrls: [`./app.component.css`] })
+@Component({
+  selector: `dm-root`,
+  templateUrl: `./app.component.html`,
+  styleUrls: [`./app.component.css`],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
 export class AppComponent {}
