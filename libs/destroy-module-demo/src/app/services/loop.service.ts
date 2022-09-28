@@ -1,6 +1,5 @@
 import { Inject, Injectable, InjectionToken, OnDestroy } from '@angular/core';
-import { Subject } from 'rxjs';
-import { interval } from 'rxjs/observable/interval';
+import { Subject, interval } from 'rxjs';
 import { takeUntil, tap } from 'rxjs/operators';
 
 export const MODULE_NAME = new InjectionToken<string>(`Module Name Token`);

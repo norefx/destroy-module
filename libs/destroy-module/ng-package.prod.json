@@ -1,6 +1,5 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/destroy-module",
-  "deleteDestPath": false,
   "lib": { "entryFile": "src/public_api.ts" }
 }
