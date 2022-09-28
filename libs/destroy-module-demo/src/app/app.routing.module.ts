@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-// TODO: Return alias import
-// import { DestroyModuleGuard } from '@norefx/ngx-destroy-module';
-import { DestroyModuleGuard } from 'dm-dist/ngx-destroy-module';
+import { DestroyModuleGuard } from '@norefx/ngx-destroy-module';
 
 const ROUTES: Routes = [
   {

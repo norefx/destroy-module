@@ -1,0 +1,108 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "libs",
+  "projects": {
+    "destroy-module": {
+      "root": "libs/destroy-module",
+      "sourceRoot": "libs/destroy-module/src",
+      "projectType": "library",
+      "prefix": "dm",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/destroy-module/tsconfig.lib.json",
+            "project": "libs/destroy-module/ng-package.json"
+          },
+          "configurations": { "production": { "project": "libs/destroy-module/ng-package.prod.json" } }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/destroy-module/src/test.ts",
+            "tsConfig": "libs/destroy-module/tsconfig.spec.json",
+            "karmaConfig": "libs/destroy-module/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/destroy-module/tsconfig.lib.json", "libs/destroy-module/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "destroy-module-demo": {
+      "root": "libs/destroy-module-demo/",
+      "sourceRoot": "libs/destroy-module-demo/src",
+      "projectType": "application",
+      "prefix": "dm",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/destroy-module-demo",
+            "index": "libs/destroy-module-demo/src/index.html",
+            "main": "libs/destroy-module-demo/src/main.ts",
+            "polyfills": "libs/destroy-module-demo/src/polyfills.ts",
+            "tsConfig": "libs/destroy-module-demo/tsconfig.app.json",
+            "assets": ["libs/destroy-module-demo/src/favicon.ico", "libs/destroy-module-demo/src/assets"],
+            "styles": ["libs/destroy-module-demo/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "libs/destroy-module-demo/src/environments/environment.ts",
+                  "with": "libs/destroy-module-demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": { "browserTarget": "destroy-module-demo:build" },
+          "configurations": { "production": { "browserTarget": "destroy-module-demo:build:production" } }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": { "browserTarget": "destroy-module-demo:build" }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/destroy-module-demo/src/test.ts",
+            "polyfills": "libs/destroy-module-demo/src/polyfills.ts",
+            "tsConfig": "libs/destroy-module-demo/tsconfig.spec.json",
+            "karmaConfig": "libs/destroy-module-demo/karma.conf.js",
+            "styles": ["libs/destroy-module-demo/src/styles.css"],
+            "scripts": [],
+            "assets": ["libs/destroy-module-demo/src/favicon.ico", "libs/destroy-module-demo/src/assets"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/destroy-module-demo/tsconfig.app.json", "libs/destroy-module-demo/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "destroy-module"
+}
