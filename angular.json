@@ -17,14 +17,7 @@
           },
           "configurations": { "production": { "project": "libs/destroy-module/ng-package.prod.json" } }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/destroy-module/src/test.ts",
-            "tsConfig": "libs/destroy-module/tsconfig.spec.json",
-            "karmaConfig": "libs/destroy-module/karma.conf.js"
-          }
-        },
+        "test": { "builder": "@angular-builders/jest:run", "options": {} },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -83,15 +76,12 @@
           "options": { "browserTarget": "destroy-module-demo:build" }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-builders/jest:run",
           "options": {
-            "main": "libs/destroy-module-demo/src/test.ts",
-            "polyfills": "libs/destroy-module-demo/src/polyfills.ts",
-            "tsConfig": "libs/destroy-module-demo/tsconfig.spec.json",
-            "karmaConfig": "libs/destroy-module-demo/karma.conf.js",
+            "polyfills": ["src/polyfills.ts"],
+            "assets": ["libs/destroy-module-demo/src/favicon.ico", "libs/destroy-module-demo/src/assets"],
             "styles": ["libs/destroy-module-demo/src/styles.css"],
-            "scripts": [],
-            "assets": ["libs/destroy-module-demo/src/favicon.ico", "libs/destroy-module-demo/src/assets"]
+            "scripts": []
           }
         },
         "lint": {
