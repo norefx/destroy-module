@@ -4,9 +4,9 @@
   "newProjectRoot": "libs",
   "projects": {
     "destroy-module": {
+      "projectType": "library",
       "root": "libs/destroy-module",
       "sourceRoot": "libs/destroy-module/src",
-      "projectType": "library",
       "prefix": "dm",
       "architect": {
         "build": {
@@ -27,11 +27,11 @@
       }
     },
     "destroy-module-demo": {
+      "projectType": "application",
+      "schematics": {},
       "root": "libs/destroy-module-demo/",
       "sourceRoot": "libs/destroy-module-demo/src",
-      "projectType": "application",
       "prefix": "dm",
-      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
