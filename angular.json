@@ -14,8 +14,7 @@
           "options": {
             "tsConfig": "libs/destroy-module/tsconfig.lib.json",
             "project": "libs/destroy-module/ng-package.json"
-          },
-          "configurations": { "production": { "project": "libs/destroy-module/ng-package.prod.json" } }
+          }
         },
         "test": { "builder": "@angular-builders/jest:run", "options": {} },
         "lint": {
@@ -62,7 +61,8 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
             }
           }
         },
@@ -78,10 +78,11 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "polyfills": ["src/polyfills.ts"],
-            "assets": ["libs/destroy-module-demo/src/favicon.ico", "libs/destroy-module-demo/src/assets"],
+            "polyfills": "libs/destroy-module-demo/src/polyfills.ts",
+            "tsConfig": "libs/destroy-module-demo/tsconfig.spec.json",
             "styles": ["libs/destroy-module-demo/src/styles.css"],
-            "scripts": []
+            "scripts": [],
+            "assets": ["libs/destroy-module-demo/src/favicon.ico", "libs/destroy-module-demo/src/assets"]
           }
         },
         "lint": {

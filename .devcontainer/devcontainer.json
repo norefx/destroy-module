@@ -7,7 +7,98 @@
     }
   },
 
-  "settings": {},
+  "settings": {
+    "angular.experimental-ivy": true,
+    "cSpell.language": "en, ru",
+    "cSpell.words": [],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "docker.commands.composeUp": [
+      {
+        "label": "override",
+        "template": "docker-compose -f docker-compose.yml ${configurationFile}  up -d --build"
+      }
+    ],
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.detectIndentation": false,
+    "eslint.format.enable": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.tabSize": 2,
+    "eslint.alwaysShowStatus": true,
+    "eslint.debug": true,
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "html.format.endWithNewline": true,
+    "html.format.indentHandlebars": true,
+    "html.format.maxPreserveNewLines": 1,
+    "importSorter.importStringConfiguration.tabSize": 2,
+    "importSorter.sortConfiguration.customOrderingRules.rules": [
+      {
+        "regex": "^[@]",
+        "orderLevel": 10
+      },
+      {
+        "type": "importMember",
+        "regex": "^$",
+        "orderLevel": 20,
+        "disableSort": true
+      },
+      {
+        "regex": "^[.]",
+        "orderLevel": 30
+      }
+    ],
+    "importSorter.sortConfiguration.removeUnusedDefaultImports": true,
+    "importSorter.sortConfiguration.removeUnusedImports": true,
+    "javascript.preferences.quoteStyle": "single",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "peacock.color": "#2b7489",
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "workbench.editor.enablePreview": false,
+    "angular.log": "terse",
+    "angular.trace.server": "messages",
+    "workbench.editor.closeOnFileDelete": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "html.format.wrapAttributes": "force-expand-multiline",
+    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "words",
+    // "[javascript]": {
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // "prettier.printWidth": 250
+    // },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "coverage-gutters.coverageReportFileName": "../../coverage/**/index.html",
+    "cSpell.enableFiletypes": [
+      "html"
+    ],
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#3795b0",
+      "activityBar.background": "#3795b0",
+      "activityBar.foreground": "#e7e7e7",
+      "activityBar.inactiveForeground": "#e7e7e799",
+      "activityBarBadge.background": "#922e7b",
+      "activityBarBadge.foreground": "#e7e7e7",
+      "commandCenter.border": "#e7e7e799",
+      "sash.hoverBorder": "#3795b0",
+      "statusBar.background": "#2b7489",
+      "statusBar.foreground": "#e7e7e7",
+      "statusBarItem.hoverBackground": "#3795b0",
+      "statusBarItem.remoteBackground": "#2b7489",
+      "statusBarItem.remoteForeground": "#e7e7e7",
+      "titleBar.activeBackground": "#2b7489",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#2b748999",
+      "titleBar.inactiveForeground": "#e7e7e799"
+    }
+  },
 
   "extensions": [
     "Angular.ng-template",
