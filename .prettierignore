@@ -1,6 +1,5 @@
 # Compiled output
 /dist
-/dm-dist
 /tmp
 /out-tsc
 /bazel-out
