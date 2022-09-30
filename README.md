@@ -39,7 +39,7 @@ import { DestroyModuleGuard } from '@norefx/ngx-destroy-module';
       {
         path: `example-path`,
         canDeactivate: [DestroyModuleGuard],
-        loadChildren: `./example.module#ExampleModule`,
+        loadChildren: () => import(`./example.module`).then((m) => m.ExampleModule),
       },
     ]),
   ],

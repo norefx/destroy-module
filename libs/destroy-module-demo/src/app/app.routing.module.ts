@@ -6,12 +6,12 @@ const ROUTES: Routes = [
   {
     path: ``,
     children: [
-      { path: `a-route`, loadChildren: `./a-module/a.module#AModule` },
+      { path: `a-route`, loadChildren: () => import(`./a-module/a.module`).then((m) => m.AModule) },
       {
         path: `b-route`,
         // Guard to destroy module
         canDeactivate: [DestroyModuleGuard],
-        loadChildren: `./b-module/b.module#BModule`,
+        loadChildren: () => import(`./b-module/b.module`).then((m) => m.BModule),
       },
     ],
   },

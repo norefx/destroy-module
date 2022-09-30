@@ -17,7 +17,7 @@ const ROUTES: Routes = [
         path: `c-route`,
         // Guard to destroy module
         canDeactivate: [DestroyModuleGuard],
-        loadChildren: `../c-module/c.module#CModule`,
+        loadChildren: () => import(`../c-module/c.module`).then((m) => m.CModule),
       },
     ],
   },
