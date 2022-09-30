@@ -16,7 +16,10 @@
             "project": "libs/destroy-module/ng-package.json"
           }
         },
-        "test": { "builder": "@angular-builders/jest:run", "options": {} },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": { "tsConfig": "libs/destroy-module/tsconfig.spec.json" }
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -29,7 +32,7 @@
     "destroy-module-demo": {
       "projectType": "application",
       "schematics": {},
-      "root": "libs/destroy-module-demo/",
+      "root": "libs/destroy-module-demo",
       "sourceRoot": "libs/destroy-module-demo/src",
       "prefix": "dm",
       "architect": {
@@ -41,6 +44,7 @@
             "main": "libs/destroy-module-demo/src/main.ts",
             "polyfills": "libs/destroy-module-demo/src/polyfills.ts",
             "tsConfig": "libs/destroy-module-demo/tsconfig.app.json",
+            "aot": false,
             "assets": ["libs/destroy-module-demo/src/favicon.ico", "libs/destroy-module-demo/src/assets"],
             "styles": ["libs/destroy-module-demo/src/styles.css"],
             "scripts": []
@@ -75,7 +79,10 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": { "browserTarget": "destroy-module-demo:build" }
         },
-        "test": { "builder": "@angular-builders/jest:run", "options": {} },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": { "options": { "tsConfig": "libs/destroy-module-demo/tsconfig.spec.json" } }
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
