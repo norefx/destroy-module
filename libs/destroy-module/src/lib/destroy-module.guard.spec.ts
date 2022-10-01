@@ -1,6 +1,6 @@
 import { async, TestBed } from '@angular/core/testing';
 import { isDefinedObject } from '../types/defined-object.util';
-import { RouteWithExtendedConfig, RouteWithConfig } from '../types/route-with-config.type';
+import { RouteWithConfig, RouteWithExtendedConfig } from '../types/route-with-config.type';
 import { noop } from '../utils/noop';
 import { DestroyModuleGuard } from './destroy-module.guard';
 
