@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
-import { CanDeactivate, Route } from '@angular/router';
+import { CanDeactivate } from '@angular/router';
 import { PROJECT_NAME } from '../const/project.name';
-import { ExtendedRoute } from '../types/extended-route.type';
 import { isExtendedRoute } from '../types/extended-route.util';
-import { isLoadedConfig } from '../types/loaded-config.util';
 import { RouteWithConfig } from '../types/route-with-config.type';
 
 @Injectable()
