@@ -3,7 +3,7 @@ import { isDefinedObject } from '../types/defined-object.util';
 import { noop } from '../utils/noop';
 import { DestroyModuleGuard } from './destroy-module.guard';
 
-let guard: DestroyModuleGuard<any>;
+let guard: DestroyModuleGuard<unknown>;
 
 describe(`DestroyModuleGuard`, () => {
   beforeEach(async(() => {
@@ -29,7 +29,7 @@ function tests(): void {
   });
 
   it(`should allow module redirect`, () => {
-    const activatedRouteSnapshot: RouteWithExtendedConfig<any> = {
+    const activatedRouteSnapshot: RouteWithExtendedConfig<unknown> = {
       routeConfig: { _loadedConfig: { module: { destroy: destroyFn } } },
     };
     const result = guard.canDeactivate(null, activatedRouteSnapshot);
@@ -51,7 +51,7 @@ function tests(): void {
   });
 
   it(`should allow component redirect`, () => {
-    const activatedRouteSnapshot: RouteWithExtendedConfig<any> = {
+    const activatedRouteSnapshot: RouteWithExtendedConfig<unknown> = {
       routeConfig: { _loadedConfig: { module: { destroy: destroyFn } } },
     };
     const loadedConfigBackup = activatedRouteSnapshot.routeConfig._loadedConfig;
