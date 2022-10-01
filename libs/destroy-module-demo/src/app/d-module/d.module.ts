@@ -6,7 +6,7 @@ const PUBLIC_DECLARATIONS = [DComponent];
 
 @NgModule({ declarations: [...PUBLIC_DECLARATIONS], exports: [...PUBLIC_DECLARATIONS] })
 export class DModule implements OnDestroy {
-  // tslint:disable-next-line
+  // eslint-disable-next-line @angular-eslint/contextual-lifecycle
   ngOnDestroy(): void {
     console.log(`${NAME} destroyed`);
   }

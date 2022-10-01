@@ -21,11 +21,8 @@
           "options": { "tsConfig": "libs/destroy-module/tsconfig.spec.json" }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["libs/destroy-module/tsconfig.lib.json", "libs/destroy-module/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
-          }
+          "builder": "@angular-eslint/builder:lint",
+          "options": { "lintFilePatterns": ["libs/destroy-module/**/*.ts", "libs/destroy-module/**/*.html"] }
         }
       }
     },
@@ -84,10 +81,9 @@
           "options": { "options": { "tsConfig": "libs/destroy-module-demo/tsconfig.spec.json" } }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": ["libs/destroy-module-demo/tsconfig.app.json", "libs/destroy-module-demo/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "lintFilePatterns": ["libs/destroy-module-demo/**/*.ts", "libs/destroy-module-demo/**/*.html"]
           }
         }
       }

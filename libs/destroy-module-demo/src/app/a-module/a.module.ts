@@ -13,7 +13,7 @@ const ROUTES: Routes = [{ path: ``, component: AComponent }];
   providers: [LoopService, { provide: MODULE_NAME, useValue: NAME }],
 })
 export class AModule implements OnDestroy {
-  // tslint:disable-next-line
+  // eslint-disable-next-line @angular-eslint/contextual-lifecycle
   ngOnDestroy(): void {
     console.log(`${NAME} destroyed`);
   }

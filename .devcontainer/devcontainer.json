@@ -11,6 +11,7 @@
 
   "extensions": [
     "Angular.ng-template",
+    "dbaeumer.vscode-eslint",
     "eamodio.gitlens",
     "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode",
