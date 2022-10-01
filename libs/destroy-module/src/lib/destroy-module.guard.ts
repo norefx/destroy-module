@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanDeactivate, Route } from '@angular/router';
-import { ProjectName } from '../const/project.name';
+import { PROJECT_NAME } from '../const/project.name';
 import { ExtendedRoute } from '../types/extended-route.type';
 import { isExtendedRoute } from '../types/extended-route.util';
 import { isLoadedConfig } from '../types/loaded-config.util';
@@ -10,7 +10,7 @@ import { RouteWithConfig } from '../types/route-with-config.type';
 export class DestroyModuleGuard<T> implements CanDeactivate<T> {
   canDeactivate(component: T, currentRoute: RouteWithConfig): boolean {
     if (!!component) {
-      console.log(`${ProjectName} doesn't support component destroy`);
+      console.log(`${PROJECT_NAME} doesn't support component destroy`);
       return true;
     }
 

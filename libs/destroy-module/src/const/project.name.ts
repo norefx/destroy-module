@@ -1,1 +1,1 @@
-export const ProjectName = `DestroyModule`;
+export const PROJECT_NAME = `DestroyModule`;
