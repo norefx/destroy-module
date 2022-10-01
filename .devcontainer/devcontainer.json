@@ -14,7 +14,8 @@
     "eamodio.gitlens",
     "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode",
-    "ryanluker.vscode-coverage-gutters"
+    "ryanluker.vscode-coverage-gutters",
+    "streetsidesoftware.code-spell-checker"
   ],
 
   "remoteUser": "node"
