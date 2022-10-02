@@ -75,16 +75,7 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": { "browserTarget": "destroy-module-demo:build" }
         },
-        "test": {
-          "builder": "@angular-builders/jest:run",
-          "options": {
-            "polyfills": "libs/destroy-module-demo/src/polyfills.ts",
-            "tsConfig": "libs/destroy-module-demo/tsconfig.spec.json",
-            "styles": ["libs/destroy-module-demo/src/styles.css"],
-            "scripts": [],
-            "assets": ["libs/destroy-module-demo/src/favicon.ico", "libs/destroy-module-demo/src/assets"]
-          }
-        },
+        "test": { "builder": "@angular-builders/jest:run", "options": {} },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
