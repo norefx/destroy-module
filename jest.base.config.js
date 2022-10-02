@@ -2,5 +2,5 @@
 module.exports = {
   ...require(`./jest.config`),
   globals: { 'ts-jest': { tsconfig: `<rootDir>tsconfig.spec.json` } },
-  setupTestFrameworkScriptFile: `./jest.setup.ts`,
+  setupFilesAfterEnv: [`./jest.setup.ts`],
 };
