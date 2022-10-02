@@ -1,3 +1,3 @@
-export function isDefinedObject<T>(value: any): value is Object {
+export function isDefinedObject(value: any): value is NonNullable<Record<string, unknown>> {
   return !!value && value instanceof Object;
 }
