@@ -1,3 +1,4 @@
+import { noop } from '../utils/noop';
 import { isDestroyableModule } from './destroyable-module.util';
 
 describe(`isDestroyableModule`, () => {
@@ -10,6 +11,6 @@ function tests(): void {
     expect(isDestroyableModule(undefined)).toBeFalsy();
     expect(isDestroyableModule({})).toBeFalsy();
     expect(isDestroyableModule({ destroy: {} })).toBeFalsy();
-    expect(isDestroyableModule({ destroy: () => {} })).toBeTruthy();
+    expect(isDestroyableModule({ destroy: noop })).toBeTruthy();
   });
 }
