@@ -1,6 +1,7 @@
 import { async, TestBed } from '@angular/core/testing';
 import { isDefinedObject } from '../types/defined-object.util';
 import { RouteWithExtendedConfig, RouteWithConfig } from '../types/route-with-config.type';
+import { noop } from '../utils/noop';
 import { DestroyModuleGuard } from './destroy-module.guard';
 
 let guard: DestroyModuleGuard<any>;
@@ -9,7 +10,7 @@ describe(`DestroyModuleGuard`, () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({ providers: [DestroyModuleGuard] })
       .compileComponents()
-      .then(() => {});
+      .then(noop);
   }));
   beforeEach(() => {
     guard = TestBed.get(DestroyModuleGuard);
