@@ -1,1 +1,1 @@
-{ "extends": "./tsconfig.lib.json" }
+{ "extends": "./tsconfig.lib.json", "angularCompilerOptions": { "enableIvy": false } }

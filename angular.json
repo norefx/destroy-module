@@ -42,7 +42,7 @@
             "main": "libs/destroy-module-demo/src/main.ts",
             "polyfills": "libs/destroy-module-demo/src/polyfills.ts",
             "tsConfig": "libs/destroy-module-demo/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": ["libs/destroy-module-demo/src/favicon.ico", "libs/destroy-module-demo/src/assets"],
             "styles": ["libs/destroy-module-demo/src/styles.css"],
             "scripts": []
@@ -60,11 +60,13 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{ "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" }]
+              "budgets": [
+                { "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" },
+                { "type": "anyComponentStyle", "maximumWarning": "6kb", "maximumError": "10kb" }
+              ]
             }
           }
         },
