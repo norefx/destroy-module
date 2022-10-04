@@ -8,6 +8,7 @@
     "ng": "ng",
     "start": "ng serve destroy-module-demo",
     "build": "ng build destroy-module",
+    "build-prod": "ng build destroy-module --prod",
     "test": "yarn run test-lib",
     "test-coverage": "yarn run test-lib-coverage",
     "test-watch": "yarn run test-lib-watch",
