@@ -15,7 +15,12 @@
             "tsConfig": "libs/destroy-module/tsconfig.lib.json",
             "project": "libs/destroy-module/ng-package.json"
           },
-          "configurations": { "production": { "project": "libs/destroy-module/ng-package.prod.json" } }
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/destroy-module/tsconfig.lib.prod.json",
+              "project": "libs/destroy-module/ng-package.prod.json"
+            }
+          }
         },
         "test": { "builder": "@angular-builders/jest:run", "options": {} },
         "lint": {
