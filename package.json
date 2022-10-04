@@ -8,6 +8,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng-packagr -p libs/destroy-module/ng-package.json",
+    "build-prod": "ng-packagr -p libs/destroy-module/ng-package.prod.json",
     "test": "ng test",
     "lint": "ng lint",
     "prepare": "husky install"
