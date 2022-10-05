@@ -1,31 +1,9 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noFallthroughCasesInSwitch": true,
-    "strictNullChecks": true,
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2015",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2018", "dom"],
-    "strict": true,
-    "paths": {
-      "@norefx/ngx-destroy-module": ["dist/destroy-module/destroy-module", "dist/destroy-module"]
-    }
-  },
-  "angularCompilerOptions": {
-    "strictTemplates": true,
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  }
+  "files": [],
+  "references": [
+    { "path": "./libs/destroy-module/tsconfig.lib.json" },
+    { "path": "./libs/destroy-module/tsconfig.spec.json" },
+    { "path": "./libs/destroy-module-demo/tsconfig.app.json" },
+    { "path": "./libs/destroy-module-demo/tsconfig.spec.json" }
+  ]
 }
