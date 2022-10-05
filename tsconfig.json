@@ -20,7 +20,7 @@
     "lib": ["es2018", "dom"],
     "strict": true,
     "paths": {
-      "@norefx/ngx-destroy-module": ["dist/destroy-module/destroy-module-lib", "dist/destroy-module"]
+      "@norefx/ngx-destroy-module": ["dist/destroy-module/destroy-module", "dist/destroy-module"]
     }
   },
   "angularCompilerOptions": {
