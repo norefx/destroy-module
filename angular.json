@@ -17,10 +17,7 @@
           },
           "configurations": { "production": { "tsConfig": "libs/destroy-module/tsconfig.lib.prod.json" } }
         },
-        "test": {
-          "builder": "@angular-builders/jest:run",
-          "options": { "tsConfig": "libs/destroy-module/tsconfig.spec.json" }
-        },
+        "test": { "builder": "@angular-builders/jest:run", "options": { "tsConfig": "tsconfig.spec.json" } },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": { "lintFilePatterns": ["libs/destroy-module/**/*.ts", "libs/destroy-module/**/*.html"] }
@@ -81,13 +78,11 @@
         },
         "test": {
           "builder": "@angular-builders/jest:run",
-          "options": { "options": { "tsConfig": "libs/destroy-module-demo/tsconfig.spec.json" } }
+          "options": { "options": { "tsConfig": "tsconfig.spec.json" } }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": ["libs/destroy-module-demo/**/*.ts", "libs/destroy-module-demo/**/*.html"]
-          }
+          "options": { "lintFilePatterns": ["libs/destroy-module-demo/**/*.ts", "libs/destroy-module-demo/**/*.html"] }
         }
       }
     }
