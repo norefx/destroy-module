@@ -3,12 +3,10 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
     "noFallthroughCasesInSwitch": true,
-    "strictNullChecks": true,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -16,15 +14,13 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "module": "esnext",
-    "typeRoots": ["node_modules/@types"],
+    "module": "es2020",
     "lib": ["es2018", "dom"],
     "paths": {
       "@norefx/ngx-destroy-module": ["dist/destroy-module/destroy-module", "dist/destroy-module"]
     }
   },
   "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
     "strictTemplates": true
   }
