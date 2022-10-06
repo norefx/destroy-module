@@ -1,13 +1,13 @@
 {
   "name": "@norefx/ngx-destroy-module",
   "description": "Guard to destroy Angular lazy-loaded route modules",
-  "version": "11.1.0",
+  "version": "12.1.0",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^11.0.0",
-    "@angular/core": "^11.0.0"
+    "@angular/common": "^12.0.0",
+    "@angular/core": "^12.0.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
-}
+  }
 }
