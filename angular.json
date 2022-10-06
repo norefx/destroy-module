@@ -12,10 +12,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "libs/destroy-module/tsconfig.lib.json",
             "project": "libs/destroy-module/ng-package.json"
           },
-          "configurations": { "production": { "tsConfig": "libs/destroy-module/tsconfig.lib.prod.json" } }
+          "configurations": {
+            "production": { "tsConfig": "libs/destroy-module/tsconfig.lib.prod.json" },
+            "development": { "tsConfig": "libs/destroy-module/tsconfig.lib.json" }
+          },
+          "defaultConfiguration": "production"
         },
         "test": { "builder": "@angular-builders/jest:run", "options": { "tsConfig": "tsconfig.spec.json" } },
         "lint": {
@@ -26,7 +29,7 @@
     },
     "destroy-module-demo": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": { "@schematics/angular:application": { "strict": true } },
       "root": "libs/destroy-module-demo",
       "sourceRoot": "libs/destroy-module-demo/src",
       "prefix": "dm",
@@ -39,37 +42,42 @@
             "main": "libs/destroy-module-demo/src/main.ts",
             "polyfills": "libs/destroy-module-demo/src/polyfills.ts",
             "tsConfig": "libs/destroy-module-demo/tsconfig.app.json",
-            "aot": true,
             "assets": ["libs/destroy-module-demo/src/favicon.ico", "libs/destroy-module-demo/src/assets"],
             "styles": ["libs/destroy-module-demo/src/styles.css"],
             "scripts": []
           },
           "configurations": {
             "production": {
+              "budgets": [
+                { "type": "initial", "maximumWarning": "500kb", "maximumError": "1mb" },
+                { "type": "anyComponentStyle", "maximumWarning": "2kb", "maximumError": "4kb" }
+              ],
               "fileReplacements": [
                 {
                   "replace": "libs/destroy-module-demo/src/environments/environment.ts",
                   "with": "libs/destroy-module-demo/src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                { "type": "initial", "maximumWarning": "2mb", "maximumError": "5mb" },
-                { "type": "anyComponentStyle", "maximumWarning": "6kb", "maximumError": "10kb" }
-              ]
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "destroy-module-demo:build" },
-          "configurations": { "production": { "browserTarget": "destroy-module-demo:build:production" } }
+          "configurations": {
+            "production": { "browserTarget": "destroy-module-demo:build:production" },
+            "development": { "browserTarget": "destroy-module-demo:build:development" }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -85,5 +93,6 @@
         }
       }
     }
-  }
+  },
+  "defaultProject": "destroy-module"
 }
