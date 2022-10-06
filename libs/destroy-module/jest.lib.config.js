@@ -1,1 +1,5 @@
-module.exports = { ...require(`./jest.config`), setupFilesAfterEnv: [`<rootDir>../../jest.setup.ts`] };
+module.exports = {
+  ...require(`./jest.config`),
+  coverageDirectory: `<rootDir>../../coverage`,
+  setupFilesAfterEnv: [`<rootDir>../../jest.setup.ts`],
+};
