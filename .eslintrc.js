@@ -2,6 +2,7 @@ module.exports = {
   root: true,
   env: { es6: true },
   ignorePatterns: [`node_modules/`, `dist/`],
+  plugins: [`deprecation`],
   overrides: [
     {
       files: [`*.js`],
@@ -30,6 +31,8 @@ module.exports = {
         '@typescript-eslint/member-delimiter-style': `warn`,
         '@typescript-eslint/prefer-readonly': `warn`,
         '@typescript-eslint/no-unused-vars': [`warn`, { args: `all`, argsIgnorePattern: `^_` }],
+
+        'deprecation/deprecation': `warn`,
 
         'eol-last': `warn`,
         quotes: [`warn`, `backtick`],
