@@ -55,6 +55,7 @@
     "editorconfig": "^0.15.3",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-deprecation": "^1.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsdoc": "^39.3.6",
     "eslint-plugin-prefer-arrow": "^1.2.3",
