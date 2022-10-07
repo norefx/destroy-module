@@ -6,6 +6,7 @@
 
 |                         destroy-module                         |  Angular   |
 | :------------------------------------------------------------: | :--------: |
+| [13.x.x](https://github.com/norefx/destroy-module/tree/13.x.x) | >= 13 < 14 |
 | [12.x.x](https://github.com/norefx/destroy-module/tree/12.x.x) | >= 12 < 13 |
 | [11.x.x](https://github.com/norefx/destroy-module/tree/11.x.x) | >= 11 < 12 |
 | [10.x.x](https://github.com/norefx/destroy-module/tree/10.x.x) | >= 10 < 11 |

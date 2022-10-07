@@ -18,7 +18,7 @@
           },
           "defaultConfiguration": "production"
         },
-        "test": { "builder": "@angular-builders/jest:run", "options": { "tsConfig": "tsconfig.spec.json" } },
+        "test": { "builder": "@angular-builders/jest:run" },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": { "lintFilePatterns": ["libs/destroy-module/**/*.ts", "libs/destroy-module/**/*.html"] }
@@ -81,10 +81,7 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": { "browserTarget": "destroy-module-demo:build" }
         },
-        "test": {
-          "builder": "@angular-builders/jest:run",
-          "options": { "options": { "tsConfig": "tsconfig.spec.json" } }
-        },
+        "test": { "builder": "@angular-builders/jest:run" },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": { "lintFilePatterns": ["libs/destroy-module-demo/**/*.ts", "libs/destroy-module-demo/**/*.html"] }
