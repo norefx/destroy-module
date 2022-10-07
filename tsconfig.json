@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "paths": { "@norefx/ngx-destroy-module": ["dist/destroy-module/destroy-module", "dist/destroy-module"] },
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
@@ -15,10 +16,7 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": ["es2018", "dom"],
-    "paths": {
-      "@norefx/ngx-destroy-module": ["dist/destroy-module/destroy-module", "dist/destroy-module"]
-    }
+    "lib": ["es2018", "dom"]
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
