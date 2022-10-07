@@ -13,7 +13,7 @@ describe(`DestroyModuleGuard`, () => {
       .then(noop);
   }));
   beforeEach(() => {
-    guard = TestBed.get(DestroyModuleGuard);
+    guard = TestBed.inject(DestroyModuleGuard);
   });
 
   tests();
