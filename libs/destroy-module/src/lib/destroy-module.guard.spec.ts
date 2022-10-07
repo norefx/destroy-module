@@ -1,4 +1,4 @@
-import { async, TestBed } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { isDefinedObject } from '../types/defined-object.util';
 import { RouteWithConfig, RouteWithExtendedConfig } from '../types/route-with-config.type';
 import { noop } from '../utils/noop';
@@ -7,7 +7,7 @@ import { DestroyModuleGuard } from './destroy-module.guard';
 let guard: DestroyModuleGuard<unknown>;
 
 describe(`DestroyModuleGuard`, () => {
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({ providers: [DestroyModuleGuard] })
       .compileComponents()
       .then(noop);
