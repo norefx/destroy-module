@@ -1,6 +1,7 @@
 import { Route } from '@angular/router';
-import { LoadedConfig } from './loaded-config.type';
+import { DestroyableModule } from './destroyable-module.type';
 
 export interface ExtendedRoute<T> extends Route {
-  _loadedConfig?: LoadedConfig<T>;
+  _loadedInjector?: DestroyableModule<T>;
+  _loadedRoutes?: Route[];
 }
