@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { CanDeactivate } from '@angular/router';
 import { PROJECT_NAME } from '../const/project.name';
-import { hasField } from '../types/has-field.util';
-import { isLoadedConfig } from '../types/loaded-config.util';
+import { isDestroyableModule } from '../types/destroyable-module.util';
+import { isExtendedRoute } from '../types/extended-route.util';
 import { RouteWithConfig } from '../types/route-with-config.type';
 
 @Injectable()
@@ -15,14 +15,15 @@ export class DestroyModuleGuard<T> implements CanDeactivate<T> {
 
     const routeConfig = currentRoute.routeConfig;
 
-    if (hasField(`_loadedConfig`)(routeConfig)) {
-      const loadedConfig = routeConfig._loadedConfig;
-      if (isLoadedConfig(loadedConfig)) {
+    if (isExtendedRoute(routeConfig)) {
+      const loadedInjector = routeConfig._loadedInjector;
+      if (isDestroyableModule(loadedInjector)) {
         // Destroy module
-        loadedConfig.module.destroy();
+        loadedInjector.destroy();
 
-        // Unset `loadedConfig` for reassigning it by router on url activation
-        delete routeConfig._loadedConfig;
+        // Unset `loadedInjector` and `loadedRoutes` for reassigning it by router on url activation
+        delete routeConfig._loadedInjector;
+        delete routeConfig._loadedRoutes;
       }
       return true;
     }
