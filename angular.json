@@ -27,7 +27,7 @@
     },
     "destroy-module-demo": {
       "projectType": "application",
-      "schematics": { "@schematics/angular:application": { "strict": true } },
+      "schematics": {},
       "root": "libs/destroy-module-demo",
       "sourceRoot": "libs/destroy-module-demo/src",
       "prefix": "dm",
@@ -89,5 +89,7 @@
       }
     }
   },
-  "defaultProject": "destroy-module"
+  "cli": {
+    "analytics": false
+  }
 }
