@@ -47,6 +47,6 @@ export class ExampleModule {}
 
 ## Demo
 
-[Stackblitz Demo](https://angular-ivy-ytzddb.stackblitz.io)
+[Stackblitz Demo](https://ngx-destroy-module.stackblitz.io)
 
 [Demo](https://user-images.githubusercontent.com/89928030/188677092-2d230816-4c50-4272-a691-5e4e0cefbcf4.webm)
