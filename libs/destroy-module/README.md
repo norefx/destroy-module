@@ -32,4 +32,4 @@ export class ExampleModule {}
 
 ## Demo
 
-[Stackblitz Demo](https://angular-ivy-ytzddb.stackblitz.io)
+[Stackblitz Demo](https://ngx-destroy-module.stackblitz.io)
